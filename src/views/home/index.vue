@@ -1,5 +1,10 @@
 <template>
-    <div>home page</div>
+    <div>
+        <el-button>
+            <EditIcon></EditIcon>
+            home page
+        </el-button>
+    </div>
 </template>
 
 <script setup lang="ts">
