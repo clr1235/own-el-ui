@@ -1,17 +1,12 @@
 <template>
-    <div>
-        <el-button>
-            <EditIcon></EditIcon>
-            home page
-        </el-button>
-    </div>
+	<div>
+		<el-button>
+			<EditIcon></EditIcon>
+			home page
+		</el-button>
+	</div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-
-</script>
-
-<style lang="less" scoped>
-
-</style>
+<style lang="less" scoped></style>

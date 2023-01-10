@@ -1,0 +1,28 @@
+{
+  "editor.rulers": [120],
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  // eslint配置项，保存时自动修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // 默认使用prettier格式化支持的文件
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //自动设定eslint工作区
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "codestream.requestFeedbackOnCommit": false,
+  "editor.fontLigatures": null,
+  "security.workspace.trust.untrustedFiles": "open",
+  "diffEditor.ignoreTrimWhitespace": false
+}
