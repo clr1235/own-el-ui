@@ -15,6 +15,7 @@ const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 	app.component(`${key}Icon`, component)
 }
+// ceshi
 // 注册路由
 app.use(router)
 // 国际化
