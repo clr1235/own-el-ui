@@ -1,27 +1,57 @@
 {
 	"editor.rulers": [120],
 	"editor.tabSize": 4,
-	"editor.formatOnSave": true,
-	// eslint配置项，保存时自动修复
+	// 自动设定eslint工作区
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	],
+	"files.eol": "\n",
+	// 文件末尾插入新行
+	"files.insertFinalNewline": true,
+	// 去除末尾多余2行的新行，只保留一行新行
+	"files.trimFinalNewlines": true,
+	// 去除连续的空格，只保留一个空格
+	"files.trimTrailingWhitespace": true,
+	// 控制台显示eslint
+	"eslint.alwaysShowStatus": true,
+	// 输入时运行eslint
+	"eslint.run": "onType",
+	"eslint.options": {
+		"extensions": [".js", ".vue", ".jsx", ".tsx"]
+	},
+	"eslint.enable": true,
+	// 保存时运行eslint进行修复
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
 	},
+	// 保存时自动格式化
+	"editor.formatOnType": true,
+	"editor.formatOnSave": true,
 	// 默认使用prettier格式化支持的文件
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	//自动设定eslint工作区
-	"eslint.workingDirectories": [{ "mode": "auto" }],
+	//针对共用的语言如JS、TS和JSX关闭文件保存自动格式化功能，通过eslint来做这件事
 	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[javascriptvue]": {
+		"editor.formatOnSave": false
+	},
+	"[typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"editor.suggestSelection": "first",
-	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"codestream.requestFeedbackOnCommit": false,
-	"security.workspace.trust.untrustedFiles": "open",
-	"diffEditor.ignoreTrimWhitespace": false
+	"[less]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.requireConfig": true // 需要Prettier的配置文件
 }
