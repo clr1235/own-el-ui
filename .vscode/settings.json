@@ -31,6 +31,8 @@
 	"editor.formatOnSave": true,
 	// 默认使用prettier格式化支持的文件
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	// 关闭references提示
+	"editor.codeLens": false,
 	//针对共用的语言如JS、TS和JSX关闭文件保存自动格式化功能，通过eslint来做这件事
 	"[javascript]": {
 		"editor.formatOnSave": false

@@ -15,11 +15,11 @@ export const routes: Array<RouteRecordRaw> = [
 				},
 			},
 			{
-				path: "/about",
-				name: "about",
-				component: () => import("../views/about/index.vue"),
+				path: "/chooseIcon",
+				name: "chooseIcon",
+				component: () => import("../views/chooseIcon/index.vue"),
 				meta: {
-					title: "about page",
+					title: "chooseIconPage",
 				},
 			},
 		],
