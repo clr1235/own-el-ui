@@ -6,13 +6,13 @@
 		<template #header="{ close }">
 			<div class="header">
 				<h4>{{ title }}</h4>
-				<span @click="close">
+				<span class="closeIcon" @click="close">
 					<CloseIcon />
 				</span>
 			</div>
 		</template>
 		<div class="container">
-			<div class="item" v-for="(item, index) in Object.keys(elementIcons)" :key="index">
+			<div class="item" v-for="(item, index) in Object.keys(elementIcons)" :key="index" @click="onCopy(item)">
 				<component :is="`${item}Icon`"></component>
 				<div class="text">{{ `${item}Icon` }}</div>
 			</div>
@@ -23,6 +23,8 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import * as elementIcons from "@element-plus/icons-vue"
+import { useCopy } from "../../../hooks/useCopy/index"
+
 const props = defineProps<{
 	title: string
 	visible: boolean
@@ -32,6 +34,12 @@ const dialogVisible = ref<boolean>(props.visible)
 const handleClick = () => {
 	dialogVisible.value = !props.visible
 }
+
+const onCopy = (item: string) => {
+	const text = `<${item}Icon />`
+	useCopy(text)
+	dialogVisible.value = false
+}
 </script>
 
 <style lang="scss" scoped>
@@ -40,6 +48,9 @@ const handleClick = () => {
 	justify-content: space-between;
 	align-items: center;
 	height: 40px;
+	.closeIcon {
+		cursor: pointer;
+	}
 }
 .container {
 	display: flex;
