@@ -22,6 +22,14 @@ export const routes: Array<RouteRecordRaw> = [
 					title: "chooseIconPage",
 				},
 			},
+			{
+				path: "/chooseArea",
+				name: "chooseArea",
+				component: () => import("../views/chooseArea/index.vue"),
+				meta: {
+					title: "chooseAreaPage",
+				},
+			},
 		],
 	},
 ]
