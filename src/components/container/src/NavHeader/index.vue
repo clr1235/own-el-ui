@@ -1,5 +1,5 @@
 <template>
-	<span @click="toggle">
+	<span class="menuSwitch" @click="toggle">
 		<FoldIcon v-if="collapse" />
 		<ExpandIcon v-else />
 	</span>
@@ -15,7 +15,16 @@ const emits = defineEmits<{
 const toggle = () => {
 	emits("update:collapse", !props.collapse)
 }
-console.log(123)
 </script>
 
-<style lang="less" scoped></style>
+<style lang="scss" scoped>
+.menuSwitch {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		margin: 0;
+	}
+}
+</style>

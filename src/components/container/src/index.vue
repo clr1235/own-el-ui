@@ -24,7 +24,10 @@ let isCollapse = ref(false)
 
 <style scoped>
 .el-header {
-	padding: 0;
+	padding: 6px 10px;
 	height: 60px;
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px var(--el-menu-border-color);
 }
 </style>
