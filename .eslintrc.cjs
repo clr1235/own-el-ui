@@ -34,5 +34,6 @@ module.exports = {
 		"prefer-const": 0,
 		// 关掉tab缩进
 		indent: [0, "tab"],
+		"@typescript-eslint/no-explicit-any": 0,
 	},
 }

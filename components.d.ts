@@ -8,6 +8,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Aside: typeof import('./src/components/container/src/Aside/index.vue')['default']
+    ChooseArea: typeof import("./src/components/chooseArea/src/index.vue")["default"]
+    ChooseIcon: typeof import("./src/components/chooseIcon/src/index.vue")["default"]
+    ContainerSrc: typeof import("./src/components/container/src/index.vue")["default"]
+    ContainerSrcAside: typeof import("./src/components/container/src/Aside/index.vue")["default"]
+    ContainerSrcNavHeader: typeof import("./src/components/container/src/NavHeader/index.vue")["default"]
     ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElContainer: typeof import('element-plus/es')['ElContainer']
@@ -23,6 +28,6 @@ declare module '@vue/runtime-core' {
     NavHeader: typeof import('./src/components/container/src/NavHeader/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Src: typeof import('./src/components/chooseIcon/src/index.vue')['default']
+    Src: typeof import('./src/components/chooseArea/src/index.vue')['default']
   }
 }

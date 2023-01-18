@@ -13,10 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue"
+import { ref, computed, watch } from "vue"
 import allAreas from "../lib/pca-code.json"
 
-console.log(allAreas, "allAreas")
 let province = ref<string>("")
 let city = ref<string>("")
 let area = ref<string>("")
@@ -32,6 +31,31 @@ const cities = computed({
 })
 const areas = computed(() => {
 	return cities.value?.find(item => item.code === city.value)?.children || []
+})
+
+const emits = defineEmits(["change"])
+
+watch(area, val => {
+	if (val) {
+		console.log(val, "val")
+		const provinceData = {
+			code: province.value,
+			name: province.value && provinces.value.find(item => item.code === province.value)?.name,
+		}
+		const cityData = {
+			code: city.value,
+			name: city.value && cities.value.find(item => item.code === city.value)?.name,
+		}
+		const areaData = {
+			code: area.value,
+			name: area.value && areas.value.find(item => item.code === area.value)?.name,
+		}
+		emits("change", {
+			province: provinceData,
+			city: cityData,
+			area: areaData,
+		})
+	}
 })
 </script>
 
