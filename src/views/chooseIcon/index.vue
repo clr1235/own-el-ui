@@ -1,12 +1,11 @@
 <template>
 	<div class="chooseIconPage">
-		<ChooseIcon title="选择图标" :visible="visible"> 选择图标 </ChooseIcon>
+		<choose-icon title="选择图标" :visible="visible"> 选择图标 </choose-icon>
 	</div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue"
-import ChooseIcon from "../../components/chooseIcon/src/index.vue"
 
 const visible = ref<boolean>(false)
 </script>

@@ -9,7 +9,7 @@ import "./style.css"
 
 import router from "./router"
 import App from "./App.vue"
-
+import rUI from "./components/index"
 const app = createApp(App)
 // 使用element icons
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -21,5 +21,6 @@ app.use(router)
 app.use(ElementPlus, {
 	locale: zhCn,
 })
+app.use(rUI)
 
 app.mount("#app")

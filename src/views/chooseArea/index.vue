@@ -1,12 +1,10 @@
 <template>
 	<div class="chooseAreaPage">
-		<chooseArea @change="change"></chooseArea>
+		<choose-area @change="change"></choose-area>
 	</div>
 </template>
 
 <script setup lang="ts">
-import chooseArea from "../../components/chooseArea/src/index.vue"
-
 const change = (val: any) => {
 	console.log(val, "省市区")
 }
