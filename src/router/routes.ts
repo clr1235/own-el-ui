@@ -7,19 +7,12 @@ export const routes: Array<RouteRecordRaw> = [
 		component: Container,
 		children: [
 			{
-				path: "/",
-				name: "home",
-				component: () => import("../views/home/index.vue"),
-				meta: {
-					title: "home page",
-				},
-			},
-			{
 				path: "/chooseIcon",
 				name: "chooseIcon",
 				component: () => import("../views/chooseIcon/index.vue"),
 				meta: {
-					title: "chooseIconPage",
+					title: "图标选择",
+					icon: "SelectIcon",
 				},
 			},
 			{
@@ -27,7 +20,8 @@ export const routes: Array<RouteRecordRaw> = [
 				name: "chooseArea",
 				component: () => import("../views/chooseArea/index.vue"),
 				meta: {
-					title: "chooseAreaPage",
+					title: "城市选择",
+					icon: "PlaceIcon",
 				},
 			},
 		],

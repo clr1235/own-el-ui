@@ -1,29 +1,30 @@
 <template>
 	<el-menu class="el-menu-vertical-demo" :collapse="collapse" @select="handleSelect" :default-active="defaultActive">
-		<el-menu-item index="1">
-			<MenuIcon />
-			<span>图标选择</span>
-		</el-menu-item>
-		<el-menu-item index="2">
-			<MenuIcon />
-			<span>省市区选择</span>
-		</el-menu-item>
-		<el-menu-item index="3">
-			<MenuIcon />
-			<span>导航三</span>
+		<el-menu-item :index="item.path" v-for="item in menu" :key="item.name">
+			<component :is="item.meta?.icon"></component>
+			<span>{{ item.meta?.title }}</span>
 		</el-menu-item>
 	</el-menu>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue"
+import type { RouteRecordRaw } from "vue-router"
+import { useRouter } from "vue-router"
+
+import { routes } from "../../../../router/routes"
+
+const menu = ref<Array<RouteRecordRaw>>(routes[0]?.children || [])
 const props = defineProps({
 	collapse: Boolean,
 })
-let defaultActive = ref<string>("1")
-const handleSelect = (key: string, keyPath: string[]) => {
-	console.log(key, keyPath)
+let defaultActive = ref<string>("/chooseIcon")
+const router = useRouter()
+const handleSelect = (key: string) => {
 	defaultActive.value = key
+	router.push({
+		path: key,
+	})
 }
 </script>
 
