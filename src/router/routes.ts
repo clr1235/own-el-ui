@@ -24,6 +24,15 @@ export const routes: Array<RouteRecordRaw> = [
 					icon: "PlaceIcon",
 				},
 			},
+			{
+				path: "/trend",
+				name: "trend",
+				component: () => import("../views/trend/index.vue"),
+				meta: {
+					title: "趋势选择",
+					icon: "PlaceIcon",
+				},
+			},
 		],
 	},
 ]

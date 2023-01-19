@@ -1,6 +1,6 @@
 <template>
 	<div class="chooseIconPage">
-		<choose-icon title="选择图标" :visible="visible"> 选择图标 </choose-icon>
+		<r-choose-icon title="选择图标" :visible="visible"> 选择图标 </r-choose-icon>
 	</div>
 </template>
 

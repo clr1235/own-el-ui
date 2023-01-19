@@ -1,6 +1,6 @@
 <template>
 	<div class="chooseAreaPage">
-		<choose-area @change="change"></choose-area>
+		<r-choose-area @change="change"></r-choose-area>
 	</div>
 </template>
 
