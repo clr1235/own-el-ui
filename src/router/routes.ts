@@ -33,6 +33,15 @@ export const routes: Array<RouteRecordRaw> = [
 					icon: "PlaceIcon",
 				},
 			},
+			{
+				path: "/msgNotice",
+				name: "msgNotice",
+				component: () => import("../views/msgNotice/index.vue"),
+				meta: {
+					title: "消息通知",
+					icon: "PlaceIcon",
+				},
+			},
 		],
 	},
 ]
